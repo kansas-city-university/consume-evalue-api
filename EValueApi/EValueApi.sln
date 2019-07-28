@@ -25,16 +25,4 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://ms-dev02:8080/tfs/codeprojects
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = EValueApi\\EValueApi.csproj
-		SccProjectName1 = EValueApi
-		SccLocalPath1 = EValueApi
-		SccProjectUniqueName2 = WebApiTest\\WebApiTest.csproj
-		SccProjectName2 = WebApiTest
-		SccLocalPath2 = WebApiTest
-	EndGlobalSection
 EndGlobal
