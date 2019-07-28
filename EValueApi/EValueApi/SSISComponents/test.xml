@@ -1,0 +1,407 @@
+﻿<log batch_id="17" start="2019-03-11 01:20:42:259" end="2019-03-11 01:22:10:922" duration="88655ms" processing_result="Completed">
+  <row start="2019-03-11 01:21:00:064" end="2019-03-11 01:21:04:716" duration="4643ms" processing_result="Finished processing all columns">
+    <column input_column="EValueId" input_value="1287076" start="2019-03-11 01:21:00:064" end="9999-12-31 11:59:59:999" duration="70847ms" processing_result="Started">
+      <log time="2019-03-11 01:21:00:25" message="5 E*Value records found for User Id 1287076" />
+    </column>
+    <column input_column="HepBVaccine1" input_value="4/11/2017 12:00:00 AM" start="2019-03-11 01:21:00:252" end="2019-03-11 01:21:00:253" duration="1ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:00:253" message="E*Value record found" />
+      <log time="2019-03-11 01:21:00:253" message="No changes were detected." />
+    </column>
+    <column input_column="HepBVaccine2" input_value="5/17/2017 12:00:00 AM" start="2019-03-11 01:21:00:253" end="2019-03-11 01:21:00:253" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:00:253" message="E*Value record found" />
+      <log time="2019-03-11 01:21:00:253" message="No changes were detected." />
+    </column>
+    <column input_column="HepBVaccine3" input_value="11/6/2017 12:00:00 AM" start="2019-03-11 01:21:00:253" end="2019-03-11 01:21:00:253" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:00:253" message="E*Value record found" />
+      <log time="2019-03-11 01:21:00:253" message="No changes were detected." />
+    </column>
+    <column input_column="HepBTiter/HepBTiterResult" input_value="12/9/2017 12:00:00 AM" start="2019-03-11 01:21:00:253" end="2019-03-11 01:21:02:81" duration="2556ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:00:253" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:00:253" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:02:81" message="E*Value created succeeded" />
+    </column>
+    <column input_column="FluShot" input_value="10/3/2018 12:00:00 AM" start="2019-03-11 01:21:02:81" end="2019-03-11 01:21:03:039" duration="228ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:02:81" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:02:81" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:03:039" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MeningitisVaccine" input_value="11/21/2017 12:00:00 AM" start="2019-03-11 01:21:03:039" end="2019-03-11 01:21:03:384" duration="345ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:03:039" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:03:039" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:03:384" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMR1" input_value="NULL" start="2019-03-11 01:21:03:384" end="2019-03-11 01:21:03:384" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MMR2" input_value="NULL" start="2019-03-11 01:21:03:384" end="2019-03-11 01:21:03:384" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MMRBooster" input_value="NULL" start="2019-03-11 01:21:03:384" end="2019-03-11 01:21:03:384" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MeaslesTiter/MeaslesTiterResult" input_value="4/9/2017 12:00:00 AM" start="2019-03-11 01:21:03:384" end="2019-03-11 01:21:03:634" duration="249ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:03:384" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:03:384" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:03:634" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MumpsTiter/MumpsTiterResult" input_value="4/9/2017 12:00:00 AM" start="2019-03-11 01:21:03:634" end="2019-03-11 01:21:03:824" duration="194ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:03:634" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:03:634" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:03:824" message="E*Value created succeeded" />
+    </column>
+    <column input_column="RubellaTiter/RubellaTiterResult" input_value="4/9/2017 12:00:00 AM" start="2019-03-11 01:21:03:824" end="2019-03-11 01:21:04:029" duration="205ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:03:824" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:03:824" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:04:029" message="E*Value created succeeded" />
+    </column>
+    <column input_column="TDAPVaccine" input_value="NULL" start="2019-03-11 01:21:04:029" end="2019-03-11 01:21:04:029" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="PPDMostRecent/PPDResult" input_value="7/22/2018 12:00:00 AM" start="2019-03-11 01:21:04:029" end="2019-03-11 01:21:04:252" duration="229ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:04:029" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:04:029" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:04:252" message="E*Value created succeeded" />
+    </column>
+    <column input_column="ChestXRay/ChestXRayResult" input_value="NULL" start="2019-03-11 01:21:04:252" end="2019-03-11 01:21:04:252" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="TSpot/TSpotResult" input_value="NULL" start="2019-03-11 01:21:04:252" end="2019-03-11 01:21:04:252" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="QuatiferonGold/QuatiferonGoldResult" input_value="NULL" start="2019-03-11 01:21:04:252" end="2019-03-11 01:21:04:252" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="Varicella1" input_value="NULL" start="2019-03-11 01:21:04:252" end="2019-03-11 01:21:04:252" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="Varicella2" input_value="NULL" start="2019-03-11 01:21:04:252" end="2019-03-11 01:21:04:252" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="VaricellaTiter/VaricellaTiterResult" input_value="4/9/2017 12:00:00 AM" start="2019-03-11 01:21:04:252" end="2019-03-11 01:21:04:45" duration="200ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:04:252" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:04:252" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:04:45" message="E*Value created succeeded" />
+    </column>
+    <column input_column="IPV1" input_value="NULL" start="2019-03-11 01:21:04:45" end="2019-03-11 01:21:04:45" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="IPV2" input_value="NULL" start="2019-03-11 01:21:04:466" end="2019-03-11 01:21:04:466" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="IPV3" input_value="NULL" start="2019-03-11 01:21:04:466" end="2019-03-11 01:21:04:466" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="OPV1" input_value="NULL" start="2019-03-11 01:21:04:466" end="2019-03-11 01:21:04:466" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="OPV2" input_value="NULL" start="2019-03-11 01:21:04:466" end="2019-03-11 01:21:04:466" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="OPV3" input_value="NULL" start="2019-03-11 01:21:04:466" end="2019-03-11 01:21:04:466" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="PolioBooster" input_value="10/22/1998 12:00:00 AM" start="2019-03-11 01:21:04:466" end="2019-03-11 01:21:04:716" duration="254ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:04:466" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:04:466" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:04:716" message="E*Value created succeeded" />
+    </column>
+    <column input_column="TBNote" input_value="NULL" start="2019-03-11 01:21:04:716" end="2019-03-11 01:21:04:716" duration="0ms" processing_result="Skipped (no input column value)" />
+  </row>
+  <row start="2019-03-11 01:21:04:716" end="2019-03-11 01:21:08:337" duration="3617ms" processing_result="Finished processing all columns">
+    <column input_column="EValueId" input_value="1287077" start="2019-03-11 01:21:04:716" end="9999-12-31 11:59:59:999" duration="66204ms" processing_result="Started">
+      <log time="2019-03-11 01:21:04:889" message="0 E*Value records found for User Id 1287077" />
+    </column>
+    <column input_column="HepBVaccine1" input_value="NULL" start="2019-03-11 01:21:04:889" end="2019-03-11 01:21:04:889" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="HepBVaccine2" input_value="NULL" start="2019-03-11 01:21:04:889" end="2019-03-11 01:21:04:889" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="HepBVaccine3" input_value="NULL" start="2019-03-11 01:21:04:889" end="2019-03-11 01:21:04:889" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="HepBTiter/HepBTiterResult" input_value="10/7/2015 12:00:00 AM" start="2019-03-11 01:21:04:889" end="2019-03-11 01:21:05:095" duration="209ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:04:889" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:04:889" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:05:095" message="E*Value created succeeded" />
+    </column>
+    <column input_column="FluShot" input_value="10/4/2018 12:00:00 AM" start="2019-03-11 01:21:05:095" end="2019-03-11 01:21:05:309" duration="210ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:05:095" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:05:095" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:05:309" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MeningitisVaccine" input_value="5/16/2017 12:00:00 AM" start="2019-03-11 01:21:05:309" end="2019-03-11 01:21:05:509" duration="200ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:05:309" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:05:309" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:05:509" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMR1" input_value="NULL" start="2019-03-11 01:21:05:509" end="2019-03-11 01:21:05:509" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MMR2" input_value="NULL" start="2019-03-11 01:21:05:509" end="2019-03-11 01:21:05:509" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MMRBooster" input_value="6/13/2013 12:00:00 AM" start="2019-03-11 01:21:05:509" end="2019-03-11 01:21:05:718" duration="209ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:05:509" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:05:509" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:05:718" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MeaslesTiter/MeaslesTiterResult" input_value="5/5/2017 12:00:00 AM" start="2019-03-11 01:21:05:718" end="2019-03-11 01:21:05:925" duration="206ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:05:719" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:05:719" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:05:925" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MumpsTiter/MumpsTiterResult" input_value="5/5/2017 12:00:00 AM" start="2019-03-11 01:21:05:925" end="2019-03-11 01:21:06:199" duration="274ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:05:925" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:05:925" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:06:199" message="E*Value created succeeded" />
+    </column>
+    <column input_column="RubellaTiter/RubellaTiterResult" input_value="5/5/2017 12:00:00 AM" start="2019-03-11 01:21:06:199" end="2019-03-11 01:21:06:45" duration="250ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:06:199" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:06:199" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:06:45" message="E*Value created succeeded" />
+    </column>
+    <column input_column="TDAPVaccine" input_value="NULL" start="2019-03-11 01:21:06:45" end="2019-03-11 01:21:06:45" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="PPDMostRecent/PPDResult" input_value="7/25/2018 12:00:00 AM" start="2019-03-11 01:21:06:45" end="2019-03-11 01:21:07:772" duration="1326ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:06:45" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:06:45" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:07:772" message="E*Value created succeeded" />
+    </column>
+    <column input_column="ChestXRay/ChestXRayResult" input_value="NULL" start="2019-03-11 01:21:07:772" end="2019-03-11 01:21:07:772" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="TSpot/TSpotResult" input_value="NULL" start="2019-03-11 01:21:07:772" end="2019-03-11 01:21:07:772" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="QuatiferonGold/QuatiferonGoldResult" input_value="NULL" start="2019-03-11 01:21:07:772" end="2019-03-11 01:21:07:772" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="Varicella1" input_value="NULL" start="2019-03-11 01:21:07:772" end="2019-03-11 01:21:07:772" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="Varicella2" input_value="NULL" start="2019-03-11 01:21:07:772" end="2019-03-11 01:21:07:772" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="VaricellaTiter/VaricellaTiterResult" input_value="6/2/2017 12:00:00 AM" start="2019-03-11 01:21:07:772" end="2019-03-11 01:21:08:029" duration="263ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:07:772" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:07:772" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:08:029" message="E*Value created succeeded" />
+    </column>
+    <column input_column="IPV1" input_value="NULL" start="2019-03-11 01:21:08:029" end="2019-03-11 01:21:08:029" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="IPV2" input_value="NULL" start="2019-03-11 01:21:08:029" end="2019-03-11 01:21:08:029" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="IPV3" input_value="NULL" start="2019-03-11 01:21:08:029" end="2019-03-11 01:21:08:029" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="OPV1" input_value="NULL" start="2019-03-11 01:21:08:029" end="2019-03-11 01:21:08:029" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="OPV2" input_value="NULL" start="2019-03-11 01:21:08:029" end="2019-03-11 01:21:08:029" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="OPV3" input_value="NULL" start="2019-03-11 01:21:08:029" end="2019-03-11 01:21:08:029" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="PolioBooster" input_value="4/22/2001 12:00:00 AM" start="2019-03-11 01:21:08:029" end="2019-03-11 01:21:08:337" duration="297ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:08:029" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:08:029" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:08:337" message="E*Value created succeeded" />
+    </column>
+    <column input_column="TBNote" input_value="NULL" start="2019-03-11 01:21:08:337" end="2019-03-11 01:21:08:337" duration="0ms" processing_result="Skipped (no input column value)" />
+  </row>
+  <row start="2019-03-11 01:21:08:338" end="2019-03-11 01:21:12:684" duration="4345ms" processing_result="Finished processing all columns">
+    <column input_column="EValueId" input_value="1287078" start="2019-03-11 01:21:08:338" end="9999-12-31 11:59:59:999" duration="62587ms" processing_result="Started">
+      <log time="2019-03-11 01:21:08:509" message="6 E*Value records found for User Id 1287078" />
+    </column>
+    <column input_column="HepBVaccine1" input_value="9/21/2004 12:00:00 AM" start="2019-03-11 01:21:08:509" end="2019-03-11 01:21:08:509" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:08:509" message="E*Value record found" />
+      <log time="2019-03-11 01:21:08:509" message="No changes were detected." />
+    </column>
+    <column input_column="HepBVaccine2" input_value="11/1/2004 12:00:00 AM" start="2019-03-11 01:21:08:509" end="2019-03-11 01:21:08:509" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:08:509" message="E*Value record found" />
+      <log time="2019-03-11 01:21:08:509" message="No changes were detected." />
+    </column>
+    <column input_column="HepBVaccine3" input_value="1/28/2005 12:00:00 AM" start="2019-03-11 01:21:08:509" end="2019-03-11 01:21:08:509" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:08:509" message="E*Value record found" />
+      <log time="2019-03-11 01:21:08:509" message="No changes were detected." />
+    </column>
+    <column input_column="HepBTiter/HepBTiterResult" input_value="3/8/2017 12:00:00 AM" start="2019-03-11 01:21:08:509" end="2019-03-11 01:21:08:733" duration="223ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:08:509" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:08:509" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:08:733" message="E*Value created succeeded" />
+    </column>
+    <column input_column="FluShot" input_value="11/19/2018 12:00:00 AM" start="2019-03-11 01:21:08:733" end="2019-03-11 01:21:08:952" duration="219ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:08:733" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:08:733" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:08:952" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MeningitisVaccine" input_value="2/22/2017 12:00:00 AM" start="2019-03-11 01:21:08:952" end="2019-03-11 01:21:09:166" duration="214ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:08:952" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:08:952" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:09:166" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMR1" input_value="11/19/1995 12:00:00 AM" start="2019-03-11 01:21:09:166" end="2019-03-11 01:21:09:394" duration="242ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:09:166" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:09:166" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:09:394" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMR2" input_value="7/21/2004 12:00:00 AM" start="2019-03-11 01:21:09:394" end="2019-03-11 01:21:09:718" duration="324ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:09:394" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:09:394" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:09:718" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMRBooster" input_value="NULL" start="2019-03-11 01:21:09:718" end="2019-03-11 01:21:09:718" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MeaslesTiter/MeaslesTiterResult" input_value="4/25/2017 12:00:00 AM" start="2019-03-11 01:21:09:718" end="2019-03-11 01:21:09:978" duration="245ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:09:718" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:09:718" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:09:978" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MumpsTiter/MumpsTiterResult" input_value="4/25/2017 12:00:00 AM" start="2019-03-11 01:21:09:978" end="2019-03-11 01:21:10:205" duration="226ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:09:978" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:09:978" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:10:205" message="E*Value created succeeded" />
+    </column>
+    <column input_column="RubellaTiter/RubellaTiterResult" input_value="2/28/2017 12:00:00 AM" start="2019-03-11 01:21:10:205" end="2019-03-11 01:21:10:46" duration="254ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:10:205" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:10:205" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:10:46" message="E*Value created succeeded" />
+    </column>
+    <column input_column="TDAPVaccine" input_value="NULL" start="2019-03-11 01:21:10:46" end="2019-03-11 01:21:10:46" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="PPDMostRecent/PPDResult" input_value="NULL" start="2019-03-11 01:21:10:46" end="2019-03-11 01:21:10:46" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="ChestXRay/ChestXRayResult" input_value="NULL" start="2019-03-11 01:21:10:46" end="2019-03-11 01:21:10:46" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="TSpot/TSpotResult" input_value="NULL" start="2019-03-11 01:21:10:46" end="2019-03-11 01:21:10:46" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="QuatiferonGold/QuatiferonGoldResult" input_value="11/19/2018 12:00:00 AM" start="2019-03-11 01:21:10:46" end="2019-03-11 01:21:10:682" duration="222ms" processing_result="">
+      <log time="2019-03-11 01:21:10:46" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:10:46" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:10:682" message="E*Value update record failed" />
+      <log time="2019-03-11 01:21:10:682" message="Sequence contains no elements" />
+    </column>
+    <column input_column="Varicella1" input_value="NULL" start="2019-03-11 01:21:10:682" end="2019-03-11 01:21:10:682" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="Varicella2" input_value="NULL" start="2019-03-11 01:21:10:682" end="2019-03-11 01:21:10:682" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="VaricellaTiter/VaricellaTiterResult" input_value="2/28/2017 12:00:00 AM" start="2019-03-11 01:21:10:682" end="2019-03-11 01:21:10:928" duration="245ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:10:682" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:10:682" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:10:928" message="E*Value created succeeded" />
+    </column>
+    <column input_column="IPV1" input_value="1/19/1995 12:00:00 AM" start="2019-03-11 01:21:10:928" end="2019-03-11 01:21:11:17" duration="241ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:10:928" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:10:928" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:11:17" message="E*Value created succeeded" />
+    </column>
+    <column input_column="IPV2" input_value="3/19/1995 12:00:00 AM" start="2019-03-11 01:21:11:17" end="2019-03-11 01:21:11:413" duration="243ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:11:17" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:11:17" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:11:413" message="E*Value created succeeded" />
+    </column>
+    <column input_column="IPV3" input_value="5/19/1995 12:00:00 AM" start="2019-03-11 01:21:11:414" end="2019-03-11 01:21:11:708" duration="294ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:11:414" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:11:414" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:11:708" message="E*Value created succeeded" />
+    </column>
+    <column input_column="OPV1" input_value="1/19/1995 12:00:00 AM" start="2019-03-11 01:21:11:708" end="2019-03-11 01:21:12:071" duration="363ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:11:708" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:11:708" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:12:071" message="E*Value created succeeded" />
+    </column>
+    <column input_column="OPV2" input_value="3/19/1995 12:00:00 AM" start="2019-03-11 01:21:12:071" end="2019-03-11 01:21:12:39" duration="318ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:12:072" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:12:072" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:12:39" message="E*Value created succeeded" />
+    </column>
+    <column input_column="OPV3" input_value="5/19/1995 12:00:00 AM" start="2019-03-11 01:21:12:39" end="2019-03-11 01:21:12:684" duration="293ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:12:39" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:12:39" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:12:684" message="E*Value created succeeded" />
+    </column>
+    <column input_column="PolioBooster" input_value="NULL" start="2019-03-11 01:21:12:684" end="2019-03-11 01:21:12:684" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="TBNote" input_value="NULL" start="2019-03-11 01:21:12:684" end="2019-03-11 01:21:12:684" duration="0ms" processing_result="Skipped (no input column value)" />
+  </row>
+  <row start="2019-03-11 01:21:12:684" end="2019-03-11 01:21:20:203" duration="7519ms" processing_result="Finished processing all columns">
+    <column input_column="EValueId" input_value="1287080" start="2019-03-11 01:21:12:684" end="9999-12-31 11:59:59:999" duration="58241ms" processing_result="Started">
+      <log time="2019-03-11 01:21:12:847" message="6 E*Value records found for User Id 1287080" />
+    </column>
+    <column input_column="HepBVaccine1" input_value="6/12/2017 12:00:00 AM" start="2019-03-11 01:21:12:847" end="2019-03-11 01:21:12:847" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:12:847" message="E*Value record found" />
+      <log time="2019-03-11 01:21:12:847" message="No changes were detected." />
+    </column>
+    <column input_column="HepBVaccine2" input_value="7/12/2017 12:00:00 AM" start="2019-03-11 01:21:12:847" end="2019-03-11 01:21:12:847" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:12:847" message="E*Value record found" />
+      <log time="2019-03-11 01:21:12:847" message="No changes were detected." />
+    </column>
+    <column input_column="HepBVaccine3" input_value="11/22/2017 12:00:00 AM" start="2019-03-11 01:21:12:847" end="2019-03-11 01:21:12:847" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:12:847" message="E*Value record found" />
+      <log time="2019-03-11 01:21:12:847" message="No changes were detected." />
+    </column>
+    <column input_column="HepBTiter/HepBTiterResult" input_value="1/3/2018 12:00:00 AM" start="2019-03-11 01:21:12:847" end="2019-03-11 01:21:13:129" duration="282ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:12:847" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:12:847" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:13:129" message="E*Value created succeeded" />
+    </column>
+    <column input_column="FluShot" input_value="10/4/2018 12:00:00 AM" start="2019-03-11 01:21:13:129" end="2019-03-11 01:21:13:389" duration="258ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:13:129" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:13:129" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:13:389" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MeningitisVaccine" input_value="9/1/2017 12:00:00 AM" start="2019-03-11 01:21:13:389" end="2019-03-11 01:21:13:658" duration="269ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:13:389" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:13:389" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:13:658" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMR1" input_value="NULL" start="2019-03-11 01:21:13:658" end="2019-03-11 01:21:13:658" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MMR2" input_value="NULL" start="2019-03-11 01:21:13:658" end="2019-03-11 01:21:13:658" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MMRBooster" input_value="NULL" start="2019-03-11 01:21:13:658" end="2019-03-11 01:21:13:658" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MeaslesTiter/MeaslesTiterResult" input_value="6/8/2017 12:00:00 AM" start="2019-03-11 01:21:13:658" end="2019-03-11 01:21:14:008" duration="349ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:13:658" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:13:658" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:14:008" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MumpsTiter/MumpsTiterResult" input_value="6/8/2017 12:00:00 AM" start="2019-03-11 01:21:14:008" end="2019-03-11 01:21:14:566" duration="558ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:14:008" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:14:008" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:14:566" message="E*Value created succeeded" />
+    </column>
+    <column input_column="RubellaTiter/RubellaTiterResult" input_value="6/8/2017 12:00:00 AM" start="2019-03-11 01:21:14:566" end="2019-03-11 01:21:14:955" duration="388ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:14:566" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:14:566" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:14:955" message="E*Value created succeeded" />
+    </column>
+    <column input_column="TDAPVaccine" input_value="NULL" start="2019-03-11 01:21:14:955" end="2019-03-11 01:21:14:955" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="PPDMostRecent/PPDResult" input_value="NULL" start="2019-03-11 01:21:14:955" end="2019-03-11 01:21:14:955" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="ChestXRay/ChestXRayResult" input_value="NULL" start="2019-03-11 01:21:14:955" end="2019-03-11 01:21:14:955" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="TSpot/TSpotResult" input_value="NULL" start="2019-03-11 01:21:14:955" end="2019-03-11 01:21:14:955" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="QuatiferonGold/QuatiferonGoldResult" input_value="7/11/2018 12:00:00 AM" start="2019-03-11 01:21:14:955" end="2019-03-11 01:21:16:774" duration="1818ms" processing_result="">
+      <log time="2019-03-11 01:21:14:955" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:14:955" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:16:774" message="E*Value update record failed" />
+      <log time="2019-03-11 01:21:16:774" message="Sequence contains no elements" />
+    </column>
+    <column input_column="Varicella1" input_value="NULL" start="2019-03-11 01:21:16:774" end="2019-03-11 01:21:16:774" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="Varicella2" input_value="NULL" start="2019-03-11 01:21:16:774" end="2019-03-11 01:21:16:774" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="VaricellaTiter/VaricellaTiterResult" input_value="6/8/2017 12:00:00 AM" start="2019-03-11 01:21:16:774" end="2019-03-11 01:21:17:062" duration="288ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:16:774" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:16:774" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:17:062" message="E*Value created succeeded" />
+    </column>
+    <column input_column="IPV1" input_value="4/25/1995 12:00:00 AM" start="2019-03-11 01:21:17:062" end="2019-03-11 01:21:17:397" duration="334ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:17:062" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:17:062" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:17:397" message="E*Value created succeeded" />
+    </column>
+    <column input_column="IPV2" input_value="7/10/1995 12:00:00 AM" start="2019-03-11 01:21:17:397" end="2019-03-11 01:21:17:71" duration="313ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:17:397" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:17:397" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:17:71" message="E*Value created succeeded" />
+    </column>
+    <column input_column="IPV3" input_value="6/10/1996 12:00:00 AM" start="2019-03-11 01:21:17:71" end="2019-03-11 01:21:18:036" duration="325ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:17:71" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:17:71" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:18:036" message="E*Value created succeeded" />
+    </column>
+    <column input_column="OPV1" input_value="4/25/1995 12:00:00 AM" start="2019-03-11 01:21:18:036" end="2019-03-11 01:21:18:376" duration="339ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:18:036" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:18:036" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:18:376" message="E*Value created succeeded" />
+    </column>
+    <column input_column="OPV2" input_value="7/10/1995 12:00:00 AM" start="2019-03-11 01:21:18:376" end="2019-03-11 01:21:19:767" duration="1402ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:18:376" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:18:376" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:19:767" message="E*Value created succeeded" />
+    </column>
+    <column input_column="OPV3" input_value="6/10/1996 12:00:00 AM" start="2019-03-11 01:21:19:767" end="2019-03-11 01:21:20:203" duration="424ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:19:767" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:19:767" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:20:203" message="E*Value created succeeded" />
+    </column>
+    <column input_column="PolioBooster" input_value="NULL" start="2019-03-11 01:21:20:203" end="2019-03-11 01:21:20:203" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="TBNote" input_value="NULL" start="2019-03-11 01:21:20:203" end="2019-03-11 01:21:20:203" duration="0ms" processing_result="Skipped (no input column value)" />
+  </row>
+  <row start="2019-03-11 01:21:20:203" end="2019-03-11 01:21:26:724" duration="6521ms" processing_result="Finished processing all columns">
+    <column input_column="EValueId" input_value="1287081" start="2019-03-11 01:21:20:203" end="9999-12-31 11:59:59:999" duration="50722ms" processing_result="Started">
+      <log time="2019-03-11 01:21:20:367" message="6 E*Value records found for User Id 1287081" />
+    </column>
+    <column input_column="HepBVaccine1" input_value="4/25/1995 12:00:00 AM" start="2019-03-11 01:21:20:367" end="2019-03-11 01:21:20:367" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:20:367" message="E*Value record found" />
+      <log time="2019-03-11 01:21:20:367" message="No changes were detected." />
+    </column>
+    <column input_column="HepBVaccine2" input_value="6/24/1995 12:00:00 AM" start="2019-03-11 01:21:20:367" end="2019-03-11 01:21:20:367" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:20:367" message="E*Value record found" />
+      <log time="2019-03-11 01:21:20:367" message="No changes were detected." />
+    </column>
+    <column input_column="HepBVaccine3" input_value="11/25/1995 12:00:00 AM" start="2019-03-11 01:21:20:367" end="2019-03-11 01:21:20:367" duration="0ms" processing_result="Skipped (no changes detected)">
+      <log time="2019-03-11 01:21:20:367" message="E*Value record found" />
+      <log time="2019-03-11 01:21:20:367" message="No changes were detected." />
+    </column>
+    <column input_column="HepBTiter/HepBTiterResult" input_value="12/23/2016 12:00:00 AM" start="2019-03-11 01:21:20:367" end="2019-03-11 01:21:20:749" duration="382ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:20:367" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:20:367" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:20:749" message="E*Value created succeeded" />
+    </column>
+    <column input_column="FluShot" input_value="10/3/2018 12:00:00 AM" start="2019-03-11 01:21:20:749" end="2019-03-11 01:21:21:196" duration="446ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:20:749" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:20:749" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:21:196" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MeningitisVaccine" input_value="7/12/2018 12:00:00 AM" start="2019-03-11 01:21:21:196" end="2019-03-11 01:21:21:502" duration="315ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:21:196" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:21:196" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:21:502" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMR1" input_value="2/26/1996 12:00:00 AM" start="2019-03-11 01:21:21:502" end="2019-03-11 01:21:21:846" duration="346ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:21:502" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:21:502" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:21:846" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMR2" input_value="10/28/1999 12:00:00 AM" start="2019-03-11 01:21:21:846" end="2019-03-11 01:21:22:166" duration="309ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:21:846" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:21:846" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:22:166" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MMRBooster" input_value="NULL" start="2019-03-11 01:21:22:166" end="2019-03-11 01:21:22:166" duration="0ms" processing_result="Skipped (no input column value)" />
+    <column input_column="MeaslesTiter/MeaslesTiterResult" input_value="12/23/2016 12:00:00 AM" start="2019-03-11 01:21:22:166" end="2019-03-11 01:21:22:485" duration="318ms" processing_result="E*Value update succeeded">
+      <log time="2019-03-11 01:21:22:166" message="No E*Value record found" />
+      <log time="2019-03-11 01:21:22:166" message="Change detected, update E*Value" />
+      <log time="2019-03-11 01:21:22:485" message="E*Value created succeeded" />
+    </column>
+    <column input_column="MumpsTiter/MumpsTiterResult" input_value="12/23/2016 12:00:00 AM" start="2019-03-11 01:21:22:485" end="2019-03-11 01:21:22:818" duration="332ms" processing_result="E*Value update succeeded">
+      <log time=""

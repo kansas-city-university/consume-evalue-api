@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://rpc.xml.coldfusion" xmlns:impl="http://DefaultNamespace" targetNamespace="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://rpc.xml.coldfusion">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="CFCInvocationException">
+        <xsd:sequence />
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="linkUserToTemplateRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getUserDataRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="rmvUserFromTemplateRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createTemplateNotificationsRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createTemplateResponse">
+    <wsdl:part name="createTemplateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createTemplatePermissionsRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="rmvSitePermissionsRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="rmvTypeFromSiteResponse">
+    <wsdl:part name="rmvTypeFromSiteReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="rmvSitePermissionsResponse">
+    <wsdl:part name="rmvSitePermissionsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteResponse">
+    <wsdl:part name="deleteReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="rmvTypeFromSiteRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="linkTypeToTemplateResponse">
+    <wsdl:part name="linkTypeToTemplateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createSitePermissionsRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createSitePermissionsResponse">
+    <wsdl:part name="createSitePermissionsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createSiteNotificationsRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="linkUserToTemplateResponse">
+    <wsdl:part name="linkUserToTemplateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getUserDataResponse">
+    <wsdl:part name="getUserDataReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="rmvUserFromTemplateResponse">
+    <wsdl:part name="rmvUserFromTemplateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CFCInvocationException">
+    <wsdl:part name="fault" type="tns1:CFCInvocationException" />
+  </wsdl:message>
+  <wsdl:message name="linkTypeToTemplateRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createResponse">
+    <wsdl:part name="createReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="linkTypeToSiteRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createTemplateRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="rmvTemplatePermissionsResponse">
+    <wsdl:part name="rmvTemplatePermissionsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="rmvTemplatePermissionsRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="linkTypeToSiteResponse">
+    <wsdl:part name="linkTypeToSiteReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createTemplatePermissionsResponse">
+    <wsdl:part name="createTemplatePermissionsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="updateResponse">
+    <wsdl:part name="updateReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteRequest">
+    <wsdl:part name="msg" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createTemplateNotificationsResponse">
+    <wsdl:part name="createTemplateNotificationsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createSiteNotificationsResponse">
+    <wsdl:part name="createSiteNotificationsReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="IandC_1_0">
+    <wsdl:operation name="update" parameterOrder="msg">
+      <wsdl:input name="updateRequest" message="impl:updateRequest" />
+      <wsdl:output name="updateResponse" message="impl:updateResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="delete" parameterOrder="msg">
+      <wsdl:input name="deleteRequest" message="impl:deleteRequest" />
+      <wsdl:output name="deleteResponse" message="impl:deleteResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="create" parameterOrder="msg">
+      <wsdl:input name="createRequest" message="impl:createRequest" />
+      <wsdl:output name="createResponse" message="impl:createResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserData" parameterOrder="msg">
+      <wsdl:input name="getUserDataRequest" message="impl:getUserDataRequest" />
+      <wsdl:output name="getUserDataResponse" message="impl:getUserDataResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="rmvTypeFromSite" parameterOrder="msg">
+      <wsdl:input name="rmvTypeFromSiteRequest" message="impl:rmvTypeFromSiteRequest" />
+      <wsdl:output name="rmvTypeFromSiteResponse" message="impl:rmvTypeFromSiteResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="linkTypeToSite" parameterOrder="msg">
+      <wsdl:input name="linkTypeToSiteRequest" message="impl:linkTypeToSiteRequest" />
+      <wsdl:output name="linkTypeToSiteResponse" message="impl:linkTypeToSiteResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="createTemplate" parameterOrder="msg">
+      <wsdl:input name="createTemplateRequest" message="impl:createTemplateRequest" />
+      <wsdl:output name="createTemplateResponse" message="impl:createTemplateResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="createTemplatePermissions" parameterOrder="msg">
+      <wsdl:input name="createTemplatePermissionsRequest" message="impl:createTemplatePermissionsRequest" />
+      <wsdl:output name="createTemplatePermissionsResponse" message="impl:createTemplatePermissionsResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="createSitePermissions" parameterOrder="msg">
+      <wsdl:input name="createSitePermissionsRequest" message="impl:createSitePermissionsRequest" />
+      <wsdl:output name="createSitePermissionsResponse" message="impl:createSitePermissionsResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="linkUserToTemplate" parameterOrder="msg">
+      <wsdl:input name="linkUserToTemplateRequest" message="impl:linkUserToTemplateRequest" />
+      <wsdl:output name="linkUserToTemplateResponse" message="impl:linkUserToTemplateResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="createSiteNotifications" parameterOrder="msg">
+      <wsdl:input name="createSiteNotificationsRequest" message="impl:createSiteNotificationsRequest" />
+      <wsdl:output name="createSiteNotificationsResponse" message="impl:createSiteNotificationsResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="linkTypeToTemplate" parameterOrder="msg">
+      <wsdl:input name="linkTypeToTemplateRequest" message="impl:linkTypeToTemplateRequest" />
+      <wsdl:output name="linkTypeToTemplateResponse" message="impl:linkTypeToTemplateResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="createTemplateNotifications" parameterOrder="msg">
+      <wsdl:input name="createTemplateNotificationsRequest" message="impl:createTemplateNotificationsRequest" />
+      <wsdl:output name="createTemplateNotificationsResponse" message="impl:createTemplateNotificationsResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="rmvSitePermissions" parameterOrder="msg">
+      <wsdl:input name="rmvSitePermissionsRequest" message="impl:rmvSitePermissionsRequest" />
+      <wsdl:output name="rmvSitePermissionsResponse" message="impl:rmvSitePermissionsResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="rmvUserFromTemplate" parameterOrder="msg">
+      <wsdl:input name="rmvUserFromTemplateRequest" message="impl:rmvUserFromTemplateRequest" />
+      <wsdl:output name="rmvUserFromTemplateResponse" message="impl:rmvUserFromTemplateResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+    <wsdl:operation name="rmvTemplatePermissions" parameterOrder="msg">
+      <wsdl:input name="rmvTemplatePermissionsRequest" message="impl:rmvTemplatePermissionsRequest" />
+      <wsdl:output name="rmvTemplatePermissionsResponse" message="impl:rmvTemplatePermissionsResponse" />
+      <wsdl:fault name="CFCInvocationException" message="impl:CFCInvocationException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IandC_1_0.cfcSoapBinding" type="impl:IandC_1_0">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="update">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="updateResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="deleteResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="create">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="createResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUserData">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUserDataRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getUserDataResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="rmvTypeFromSite">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="rmvTypeFromSiteRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="rmvTypeFromSiteResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="linkTypeToSite">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="linkTypeToSiteRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="linkTypeToSiteResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createTemplate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createTemplateRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="createTemplateResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createTemplatePermissions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createTemplatePermissionsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="createTemplatePermissionsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createSitePermissions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createSitePermissionsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="createSitePermissionsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="linkUserToTemplate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="linkUserToTemplateRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="linkUserToTemplateResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createSiteNotifications">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createSiteNotificationsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="createSiteNotificationsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="linkTypeToTemplate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="linkTypeToTemplateRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="linkTypeToTemplateResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createTemplateNotifications">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createTemplateNotificationsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="createTemplateNotificationsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="rmvSitePermissions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="rmvSitePermissionsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="rmvSitePermissionsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="rmvUserFromTemplate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="rmvUserFromTemplateRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="rmvUserFromTemplateResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="rmvTemplatePermissions">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="rmvTemplatePermissionsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="rmvTemplatePermissionsResponse">
+        <wsdlsoap:body use="encoded" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault use="encoded" name="CFCInvocationException" namespace="http://DefaultNamespace" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IandC_1_0Service">
+    <wsdl:documentation>
+Immunizations and Certifications  </wsdl:documentation>
+    <wsdl:port name="IandC_1_0.cfc" binding="impl:IandC_1_0.cfcSoapBinding">
+      <wsdlsoap:address location="https://test-api.e-value.net/IandC_1_0.cfc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

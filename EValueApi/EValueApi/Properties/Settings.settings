@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EValueApi.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EValueApi_EValueInstitutionApi_Institution_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Institution_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueUserApi_User_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/User_1_0b.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueSiteApi_Site_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Site_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueTimeFrameApi_TimeFrame_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/TimeFrame_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValuePersonalRecordsApi_IandC_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/IandC_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueActivityApi_Activity_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Activity_1_0b.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueScheduleApi_Schedule_1_0bService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Schedule_1_0b.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueEvaluationApi_Evaluation_1_0bService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Evaluation_1_0b.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueRoleApi_Role_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Role_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueRankApi_Rank_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Rank_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueStatusApi_Status_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Status_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValuePeopleGroupApi_PeopleGroup_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/PeopleGroup_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValuePersonalRecordsOptionsApi_IandCOptions_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/IandCOptions_1_0.cfc</Value>
+    </Setting>
+    <Setting Name="EValueApi_EValueTeamApi_Team_1_0Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test-api.e-value.net/Team_1_0.cfc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

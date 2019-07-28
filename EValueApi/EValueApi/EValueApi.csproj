@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4650FB5-72FF-47EF-A730-AD20EA5B6441}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EValueApi</RootNamespace>
+    <AssemblyName>EValueApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>EvalueStrongName.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityApi.cs" />
+    <Compile Include="Business\Activity.cs" />
+    <Compile Include="Business\EvaluationAction.cs" />
+    <Compile Include="Business\EvaluationItem.cs" />
+    <Compile Include="Business\Group.cs" />
+    <Compile Include="Business\InstitutionUser.cs" />
+    <Compile Include="Business\PersonalRecord.cs" />
+    <Compile Include="Business\RequirementDurationType.cs" />
+    <Compile Include="Business\RequirementTypeOption.cs" />
+    <Compile Include="Business\RequirementStatusOption.cs" />
+    <Compile Include="Business\RequirementOption.cs" />
+    <Compile Include="Business\Rank.cs" />
+    <Compile Include="Business\PeopleGroup.cs" />
+    <Compile Include="Business\Status.cs" />
+    <Compile Include="Business\Role.cs" />
+    <Compile Include="Business\Schedule.cs" />
+    <Compile Include="Business\Site.cs" />
+    <Compile Include="Business\Team.cs" />
+    <Compile Include="Business\TimeFrame.cs" />
+    <Compile Include="Communication\ActivitiesResponse.cs" />
+    <Compile Include="Communication\BaseResponse.cs" />
+    <Compile Include="Communication\EvaluationActionsResponse.cs" />
+    <Compile Include="Communication\EvaluationItemsResponse.cs" />
+    <Compile Include="Communication\GroupResponse.cs" />
+    <Compile Include="Communication\InstitutionUserResponse.cs" />
+    <Compile Include="Business\User.cs" />
+    <Compile Include="Communication\PersonalRecords\CreateResponse.cs" />
+    <Compile Include="Communication\PersonalRecords\UpdateResponse.cs" />
+    <Compile Include="Communication\RequirementTypeOptionsResponse.cs" />
+    <Compile Include="Communication\RequirementStatusOptionsResponse.cs" />
+    <Compile Include="Communication\RequirementOptionsResponse.cs" />
+    <Compile Include="Communication\PersonalRecordsResponse.cs" />
+    <Compile Include="Communication\PeopleGroupsResponse.cs" />
+    <Compile Include="Communication\StatusesResponse.cs" />
+    <Compile Include="Communication\RanksResponse.cs" />
+    <Compile Include="Communication\RolesResponse.cs" />
+    <Compile Include="Communication\SchedulesResponse.cs" />
+    <Compile Include="Communication\SitesResponse.cs" />
+    <Compile Include="Communication\TeamsResponse.cs" />
+    <Compile Include="Communication\TimeFrameResponse.cs" />
+    <Compile Include="Communication\TimeFramesResponse.cs" />
+    <Compile Include="Communication\UserResponse.cs" />
+    <Compile Include="EvaluationApi.cs" />
+    <Compile Include="EvalueApi.cs" />
+    <Compile Include="InstitutionApi.cs" />
+    <Compile Include="PeopleGroupApi.cs" />
+    <Compile Include="PersonalRecordApi.cs" />
+    <Compile Include="PersonalRecordOptionApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RankApi.cs" />
+    <Compile Include="RoleApi.cs" />
+    <Compile Include="ScheduleApi.cs" />
+    <Compile Include="SiteApi.cs" />
+    <Compile Include="SSISComponents\Log.cs" />
+    <Compile Include="SSISComponents\LogGroup.cs" />
+    <Compile Include="SSISComponents\Column.cs" />
+    <Compile Include="SSISComponents\LogItem.cs" />
+    <Compile Include="SSISComponents\PersonalRecordsImportComponent.cs" />
+    <Compile Include="SSISComponents\Row.cs" />
+    <Compile Include="StatusApi.cs" />
+    <Compile Include="TeamApi.cs" />
+    <Compile Include="TimeFrameApi.cs" />
+    <Compile Include="UserApi.cs" />
+    <Compile Include="Web References\EValueActivityApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueEvaluationApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueInstitutionApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValuePeopleGroupApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValuePersonalRecordsApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValuePersonalRecordsOptionsApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueRankApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueRoleApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueScheduleApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueSiteApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueStatusApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueTeamApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueTimeFrameApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EValueUserApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://api.e-value.net/Team_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueTeamApi\</RelPath>
+      <UpdateFromURL>https://api.e-value.net/Team_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueTeamApi_Team_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/Activity_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueActivityApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/Activity_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueActivityApi_Activity_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/Evaluation_1_0b.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueEvaluationApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/Evaluation_1_0b.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueEvaluationApi_Evaluation_1_0bService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/IandCOptions_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValuePersonalRecordsOptionsApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/IandCOptions_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValuePersonalRecordsOptionsApi_IandCOptions_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/IandC_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValuePersonalRecordsApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/IandC_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValuePersonalRecordsApi_IandC_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/Institution_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueInstitutionApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/Institution_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueInstitutionApi_Institution_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/PeopleGroup_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValuePeopleGroupApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/PeopleGroup_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValuePeopleGroupApi_PeopleGroup_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/Rank_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueRankApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/Rank_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueRankApi_Rank_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/Role_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueRoleApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/Role_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueRoleApi_Role_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/Schedule_1_0b.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueScheduleApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/Schedule_1_0b.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueScheduleApi_Schedule_1_0bService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/Site_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueSiteApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/Site_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueSiteApi_Site_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/Status_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueStatusApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/Status_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueStatusApi_Status_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/TimeFrame_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueTimeFrameApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/TimeFrame_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueTimeFrameApi_TimeFrame_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test-api.e-value.net/User_1_0.cfc%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EValueUserApi\</RelPath>
+      <UpdateFromURL>https://test-api.e-value.net/User_1_0.cfc%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EValueApi_EValueUserApi_User_1_0Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EvalueStrongName.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueActivityApi\Activity_1_0.wsdl" />
+    <None Include="Web References\EValueActivityApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueEvaluationApi\Evaluation_1_0b.wsdl" />
+    <None Include="Web References\EValueEvaluationApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueInstitutionApi\Institution_1_0.wsdl" />
+    <None Include="Web References\EValueInstitutionApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValuePeopleGroupApi\PeopleGroup_1_0.wsdl" />
+    <None Include="Web References\EValuePeopleGroupApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValuePersonalRecordsApi\IandC_1_0.wsdl" />
+    <None Include="Web References\EValuePersonalRecordsApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValuePersonalRecordsOptionsApi\IandCOptions_1_0.wsdl" />
+    <None Include="Web References\EValuePersonalRecordsOptionsApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueRankApi\Rank_1_0.wsdl" />
+    <None Include="Web References\EValueRankApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueRoleApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueRoleApi\Role_1_0.wsdl" />
+    <None Include="Web References\EValueScheduleApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueScheduleApi\Schedule_1_0b.wsdl" />
+    <None Include="Web References\EValueSiteApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueSiteApi\Site_1_0.wsdl" />
+    <None Include="Web References\EValueStatusApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueStatusApi\Status_1_0.wsdl" />
+    <None Include="Web References\EValueTeamApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueTeamApi\Team_1_0.wsdl" />
+    <None Include="Web References\EValueTimeFrameApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueTimeFrameApi\TimeFrame_1_0.wsdl" />
+    <None Include="Web References\EValueUserApi\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EValueUserApi\User_1_0.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+    <Content Include="SSISComponents\test.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\gacutil.exe"  /i "$(ProjectDir)bin\debug\EValueApi.dll"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
