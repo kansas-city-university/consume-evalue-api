@@ -20,7 +20,7 @@ At this point, you can basically move code around in the Program.cs file as need
 
 Please note that some of the current calls go to the production version of the API where some go to the test.  Please adjust accordingly.
 
-License information:
+# License information:
 
 Apache License
                            Version 2.0, January 2004
