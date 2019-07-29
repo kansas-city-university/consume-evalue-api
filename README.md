@@ -1,19 +1,17 @@
 # consume-evalue-api
-Code used by our institution to access the EValue API in order to download our data and upload/update personal records information
+Code used by our institution to access the EValue API via a .NET managed assembly in order to download our data and upload/update personal records information
 
 To get this working on your local machine a few tweaks will be needed.  Of course, your institution will need to have gone through
 the process of gaining access to the API from EValue.  Therefore, you will need a client id, a client password and a sub unit Id.
 
-1.) Download and/or extract the code to a directory of your choice.  
-2.) Open the .sln file from Visual Studio.  We current use 2017.  However, it was originally written in 2015.
-3.) After project is open, you will see two projects.
-
-    EValue - This project contains the actual dll assembly used to access the EValue API
-    EValueTest - This project is simply an old school console application used to test the calls found in the EValue.dll assembly project
-
-4.) Navigate to the WebApiTest project and open up the app.config file.  You will need to enter your client id, password and sub unit Id values.
-5.) Set your start up project as the WebApiTest project
-6.) In the WebApiTest project, open the 'Program.cs' and put a breakpoint on the first line after the 'static void Main(string[] args)'
+1. Download and/or extract the code to a directory of your choice.  
+2. Open the .sln file from Visual Studio.  We current use 2017.  However, it was originally written in 2015.
+3. After project is open, you will see two projects.
+- EValue - This project contains the actual dll assembly used to access the EValue API
+- EValueTest - This project is simply an old school console application used to test the calls found in the EValue.dll assembly project
+4. Navigate to the WebApiTest project and open up the app.config file.  You will need to enter your client id, password and sub unit Id values.
+5. Set your start up project as the WebApiTest project
+6. In the WebApiTest project, open the 'Program.cs' and put a breakpoint on the first line after the 'static void Main(string[] args)'
     This will enable you to control which functions get called.
 
 At this point, you can basically move code around in the Program.cs file as needed or set your next execution point to whatever you would like to test.
