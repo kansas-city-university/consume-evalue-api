@@ -31,14 +31,27 @@ namespace WebApiTest
             }
             else
             {
+
+                // User - all
+                //var institutionPSJ = new InstitutionApi(clientId, password, subUnitId, "https://api.e-value.net/Institution_1_0.cfc");
+                //var userListPSJ = institutionPSJ.GetSubUnitUsers(1,3);
+                //userListPSJ = institutionPSJ.GetSubUnitUsers(1, 4);
+                //userListPSJ = institutionPSJ.GetSubUnitUsers(1, 5);
+                //userListPSJ = institutionPSJ.GetSubUnitUsers(1, 6);
+                //userListPSJ = institutionPSJ.GetSubUnitUsers(1, 29);
+                //userListPSJ = institutionPSJ.GetSubUnitUsers(1, 81);
+                //userListPSJ = institutionPSJ.GetSubUnitUsers(1, 241);
+
+                //TestEvaluationImportRoutine();
+
                 //DoAllSchedules
-                DoAllSchedules(clientId, password, subUnitId);
+                //DoAllSchedules(clientId, password, subUnitId);
 
                 // Use this to only test a single evaluation - uncomment for fixing this.
                 DoSingleEvaluationOnly(clientId, password, subUnitId);
 
                 // Use this to only test evaluations - uncomment for fixing this.
-                //DoAllEvaluations(clientId, password, subUnitId);
+                DoAllEvaluations(clientId, password, subUnitId);
 
                 // Use this to only test teams
                 DoTeamOnly(clientId, password, subUnitId);
@@ -226,28 +239,171 @@ namespace WebApiTest
             // Evaluations - Use the test one I have there  need to debug some issues with this.
             var eValueEval = new EvaluationApi(clientId, password, subUnitId, "https://api.e-value.net/Evaluation_1_0b.cfc");
 
+            var evaluationItems = eValueEval.GetResponses("359011", new DateTime(2019, 7, 1), new DateTime(2019, 9, 28), 1);
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} : SubjectUserId {evaluationItem.SubjectUserId} : EvaluatorUserId {evaluationItem.EvaluatorUserId} ");
+                if ((evaluationItem.SubjectUserId == 1229965) | (evaluationItem.EvaluatorUserId == 1229965))
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+
+            evaluationItems = eValueEval.GetResponses("359011", new DateTime(2019, 7, 1), new DateTime(2019, 9, 28), 1, 275194, DateTime.Now.AddDays(-60));
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.SubjectUserId == 1193817)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+
+            evaluationItems = eValueEval.GetResponses("359011", new DateTime(2019, 7, 1), new DateTime(2019, 9, 28), 1, 280052, DateTime.Now.AddDays(-30));
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.SubjectUserId == 1193817)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+            evaluationItems = eValueEval.GetResponses("359011", new DateTime(2019, 7, 1), new DateTime(2019, 9, 28), 1, 245552, DateTime.Now.AddDays(-30));
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.SubjectUserId == 1193817)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+
+
+
+
 
             // This call uses the subject user id in the parameter list - something new from EValue - yay!!
-            var evaluationItems = eValueEval.GetResponsesUsingSubjectId("359140", new DateTime(2017, 1, 1), new DateTime(2018, 7, 31), 1, 263557, 1193954);
+            evaluationItems = eValueEval.GetResponsesUsingSubjectId("359011", new DateTime(2019, 7, 1), new DateTime(2019, 8, 30), 1, 275194, 1229965);
             foreach (var evaluationItem in evaluationItems.EvaluationItems)
             {
                 Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} Name: {evaluationItem.Name} Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
-                if (evaluationItem.SubjectUserId == 1193817)
+                if (evaluationItem.SubjectUserId == 1229965)
                 {
                     Console.WriteLine("Here she is!!!!!");
                 }
             }
 
-            // This call uses the subject user id in the parameter list - something new from EValue - yay!!
-            evaluationItems = eValueEval.GetResponsesUsingEvaluatorId("365729", new DateTime(2017, 1, 1), new DateTime(2018, 7, 31), 1, 246405, 1193575);
+
+            /******************************      Figure out issues in Aug 2019 based on changes/additions to evaluation form types **************************************************/
+            // Student: Desiree Albano: 1229965
+
+            // 275194	Student Evaluation of Clerkship
+            evaluationItems = eValueEval.GetResponsesUsingEvaluatorId("359011", new DateTime(2019, 7, 1), new DateTime(2019, 8, 30), 1, 275194, 1229965);
             foreach (var evaluationItem in evaluationItems.EvaluationItems)
             {
-                Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} {evaluationItem.Name} {evaluationItem.ActivityId} {evaluationItem.Eimnum} Type {245328}");
-                if (evaluationItem.SubjectUserId == 1193817)
+                Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} Name: {evaluationItem.Name} Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.EvaluatorUserId == 1229965)
                 {
                     Console.WriteLine("Here she is!!!!!");
                 }
             }
+
+            // 279811	Student Evaluation of Preceptor
+            evaluationItems = eValueEval.GetResponsesUsingEvaluatorId("359011", new DateTime(2019, 7, 1), new DateTime(2019, 8, 30), 1, 279811, 1229965);
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} Name: {evaluationItem.Name} Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.EvaluatorUserId == 1229965)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+            // 280052	Clinical Competency Assessment - better not get any!!!!!!! - this one was not valid - it was expired at the time
+            evaluationItems = eValueEval.GetResponsesUsingEvaluatorId("359011", new DateTime(2019, 7, 1), new DateTime(2019, 8, 30), 1, 280052, 1229965);
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} Name: {evaluationItem.Name} Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.EvaluatorUserId == 1229965)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+            // 284652	Clinical Competency Assessment - better not get any!!!!!!! - this one was valid at the time, but Desiree is not the evaluator
+            evaluationItems = eValueEval.GetResponsesUsingEvaluatorId("359011", new DateTime(2019, 7, 1), new DateTime(2019, 8, 30), 1, 284652, 1229965);
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} Name: {evaluationItem.Name} Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.EvaluatorUserId == 1229965)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+            // 246139	Student ECR MS4
+            evaluationItems = eValueEval.GetResponsesUsingEvaluatorId("359011", new DateTime(2019, 7, 1), new DateTime(2019, 8, 30), 1, 246139, 1229965);
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} Name: {evaluationItem.Name} Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.EvaluatorUserId == 1229965)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+            // 245552	Student ECR MS3
+            evaluationItems = eValueEval.GetResponsesUsingEvaluatorId("359011", new DateTime(2019, 7, 1), new DateTime(2019, 8, 30), 1, 245552, 1229965);
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} Name: {evaluationItem.Name} Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.EvaluatorUserId == 1229965)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+            // 246405	Enrollment Verification
+            evaluationItems = eValueEval.GetResponsesUsingEvaluatorId("359011", new DateTime(2019, 7, 1), new DateTime(2019, 8, 30), 1, 246405, 1229965);
+            foreach (var evaluationItem in evaluationItems.EvaluationItems)
+            {
+                Console.WriteLine($"----- ---- Evaluation Item: {evaluationItem.SiteName} Name: {evaluationItem.Name} Activity: {evaluationItem.ActivityId}-{evaluationItem.Abbreviation} EIMnum: {evaluationItem.Eimnum} FormType: {evaluationItem.EvaluationFormTypeId} ");
+                if (evaluationItem.EvaluatorUserId == 1229965)
+                {
+                    Console.WriteLine("Here she is!!!!!");
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             evaluationItems = eValueEval.GetResponses("358970", new DateTime(2017, 1, 1), new DateTime(2018, 4, 30), 1, 245328, DateTime.Now.AddDays(-7));
             foreach (var evaluationItem in evaluationItems.EvaluationItems)
@@ -455,6 +611,166 @@ namespace WebApiTest
             }
         }
 
+
+        public static void TestEvaluationImportRoutine()
+        {
+
+            string clientId = ConfigurationManager.AppSettings["ClientId"];
+            string password = ConfigurationManager.AppSettings["ClientPassword"];
+            string subUnitId = ConfigurationManager.AppSettings["SubUnitId"];
+
+            const int completeStatusValue = 1;              // Always getting COMPLETE evaluations
+
+            try
+            {
+
+                string evaluationItemApiUrl = "https://api.e-value.net/Evaluation_1_0b.cfc";
+                var evaluationItemApi = new EvaluationApi(clientId, password, subUnitId, evaluationItemApiUrl);
+
+                // now get the evaluation items for this schedule, status and user id
+                var evaluationItems = evaluationItemApi.GetResponsesUsingSubjectId(359011.ToString(), new DateTime(2019, 7, 8), new DateTime(2019, 8, 2), 1, 275194, 1229965);
+//                evaluationItems = evaluationItemApi.GetResponsesUsingSubjectId(activityId, scheduleBeginDate, scheduleEndDate, 1=StatusId, evaluationFormTypeId:, subjectUserId:)
+                if (evaluationItems.Status)
+                {
+                    foreach (var evaluationItem in evaluationItems.EvaluationItems)
+                    {
+                        OutputRecordsBuffer outputRecordsBuffer = new OutputRecordsBuffer();
+
+                        outputRecordsBuffer.ActivityId = evaluationItem.ActivityId;
+                        outputRecordsBuffer.EvaluatorUserId = evaluationItem.EvaluatorUserId;
+
+                        if ((evaluationItem.SubjectUserId ?? 0) == 0)
+                        {
+                            outputRecordsBuffer.SubjectUserId_IsNull = true;
+                        }
+                        else
+                        {
+                            outputRecordsBuffer.SubjectUserId = (int)evaluationItem.SubjectUserId;
+                        }
+
+                        outputRecordsBuffer.StatusId = evaluationItem.StatusId;
+                        outputRecordsBuffer.SiteId = evaluationItem.SiteId;
+                        outputRecordsBuffer.SiteName = evaluationItem.SiteName;
+                        outputRecordsBuffer.Name = evaluationItem.Name;
+                        outputRecordsBuffer.Abbreviation = evaluationItem.Abbreviation;
+                        outputRecordsBuffer.Choice = evaluationItem.Choice;
+
+                        if (!string.IsNullOrEmpty(evaluationItem.EssayText))
+                        {
+                            outputRecordsBuffer.EssayText = evaluationItem.EssayText;
+                        }
+
+                        outputRecordsBuffer.EvaluatorExternalId = evaluationItem.EvaluatorExternalId;
+                        outputRecordsBuffer.EvaluatorExternalIdLabel = evaluationItem.EvaluatorExternalIdLabel;
+                        outputRecordsBuffer.NumericAnswer = evaluationItem.NumericAnswer;
+                        outputRecordsBuffer.IsConfidential = evaluationItem.IsConfidential;
+                        outputRecordsBuffer.IsMandatory = evaluationItem.IsMandatory;
+
+                        outputRecordsBuffer.QuestionId = evaluationItem.QuestionId;
+
+                        outputRecordsBuffer.QuestionText = evaluationItem.QuestionText;
+                        outputRecordsBuffer.QuestionTopic = evaluationItem.QuestionTopic;
+                        outputRecordsBuffer.QuestionTypeId = evaluationItem.QuestionTypeId;
+                        outputRecordsBuffer.QuestionTypeDesc = evaluationItem.QuestionTypeDesc;
+                        outputRecordsBuffer.RowId = evaluationItem.RowId;
+                        outputRecordsBuffer.SortOrder = evaluationItem.SortOrder;
+                        outputRecordsBuffer.SubjectExternalId = evaluationItem.SubjectExternalId;
+                        outputRecordsBuffer.SubjectExternalIdLabel = evaluationItem.SubjectExternalIdLabel;
+                        outputRecordsBuffer.SubjectLegacyExternalId = evaluationItem.SubjectLegacyExternalId;
+                        outputRecordsBuffer.EvaluatorLegacyExternalId = evaluationItem.EvaluatorLegacyExternalId;
+                        outputRecordsBuffer.Eimnum = evaluationItem.Eimnum;
+                        outputRecordsBuffer.EvaluationRequestId = evaluationItem.EvaluationRequestId;
+                        outputRecordsBuffer.EvaluationFormTypeId = evaluationItem.EvaluationFormTypeId;
+                        outputRecordsBuffer.TimeFrameId = evaluationItem.TimeFrameId;
+                        outputRecordsBuffer.TimeFrameLabel = evaluationItem.TimeFrameLabel;
+
+                    }
+                }
+            }
+            catch (TimeoutException ex)
+            {
+
+                //if (!EventLog.SourceExists(eventSource))
+                //{
+                //    EventSourceCreationData mySourceData = new EventSourceCreationData(eventSource, eventLog);
+                //    EventLog.CreateEventSource(mySourceData);
+                //}
+
+                //EventLog.WriteEntry(eventSource,string.Format("Timeout Exception. Message: {0}; ActivityId: {1}; Form Type id: {2}", ex.Message, Row.ActivityId, Row.EvaluationFormTypeId), EventLogEntryType.Error, 101, 1);
+
+            }
+            catch (System.Net.WebException ex)
+            {
+
+                //if (!EventLog.SourceExists(eventSource))
+                //{
+                //    EventSourceCreationData mySourceData = new EventSourceCreationData(eventSource, eventLog);
+                //    EventLog.CreateEventSource(mySourceData);
+                //}
+
+                //EventLog.WriteEntry(eventSource, string.Format("System.Net.WebException. Message: {0}; ActivityId: {1}; Form Type id: {2}", ex.Message, Row.ActivityId, Row.EvaluationFormTypeId), EventLogEntryType.Error, 101, 1);
+
+            }
+            catch (Exception ex)
+            {
+
+                //if (!EventLog.SourceExists(eventSource))
+                //{
+                //    EventSourceCreationData mySourceData = new EventSourceCreationData(eventSource, eventLog);
+                //    EventLog.CreateEventSource(mySourceData);
+                //}
+
+                //EventLog.WriteEntry(eventSource, string.Format("General Exception. Message: {0}; ActivityId: {1}; Form Type id: {2}", ex.Message, Row.ActivityId, Row.EvaluationFormTypeId), EventLogEntryType.Error, 101, 1);
+
+                bool cancel;
+                //ComponentMetaData.FireError(999, Variables.TaskName, ex.Message, string.Empty, 0, out cancel);
+            }
+        }
+
     }
+
+
+    public class OutputRecordsBuffer
+    {
+        //public TYPE Type { get; set; }
+
+        public int ActivityId { get; set; }
+        public int EvaluatorUserId { get; set; }
+        public int? SubjectUserId { get; set; }
+        public bool SubjectUserId_IsNull { get; set; }
+
+        public int StatusId { get; set; }
+        public int SiteId { get; set; }
+        public string SiteName { get; set; }
+        public string Name { get; set; }
+        public string Abbreviation { get; set; }
+        public string Choice { get; set; }
+        public string EssayText { get; set; }
+
+        public string EvaluatorExternalId { get; set; }
+        public string EvaluatorExternalIdLabel { get; set; }
+        public string NumericAnswer { get; set; }
+        public bool IsConfidential { get; set; }
+        public bool IsMandatory { get; set; }
+        public int? QuestionId { get; set; }
+        public string QuestionText { get; set; }
+        public string QuestionTopic { get; set; }
+        public int? QuestionTypeId { get; set; }
+        public string QuestionTypeDesc { get; set; }
+        public string RowId { get; set; }
+        public int? SortOrder { get; set; }
+        public string SubjectExternalId { get; set; }
+        public string SubjectExternalIdLabel { get; set; }
+        public string SubjectLegacyExternalId { get; set; }
+        public string EvaluatorLegacyExternalId { get; set; }
+        public int Eimnum { get; set; }
+        public int EvaluationRequestId { get; set; }
+        public int EvaluationFormTypeId { get; set; }
+        public int TimeFrameId { get; set; }
+        public string TimeFrameLabel { get; set; }
+
+    }
+
+
 }
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Xml;
 using EValueApi.Business;
 using EValueApi.Communication;
@@ -611,6 +610,7 @@ namespace EValueApi
         {
 
             List<EvaluationItem> resultValue;
+            int? nullIntegerValue = new Nullable<int>();
 
             var responseValue = (responseXml.GetElementsByTagName("resp")[0].Attributes?["status"].Value == "1");
 
@@ -643,13 +643,13 @@ namespace EValueApi
                         NumericAnswer = doc.SelectNodes("//d[@NAME='NumericAnswer']")?[0].InnerText,
                         IsConfidential = doc.SelectNodes("//d[@NAME='Confidential']")?[0].InnerText == "1",
                         IsMandatory = doc.SelectNodes("//d[@NAME='Mandatory']")?[0].InnerText == "1",
-                        QuestionId = int.Parse(doc.SelectNodes("//d[@NAME='QuestionId']")?[0].InnerText),
+                        QuestionId = ToNullableInt(doc.SelectNodes("//d[@NAME='QuestionId']")?[0].InnerText),
                         QuestionText = doc.SelectNodes("//d[@NAME='QuestionText']")?[0].InnerText,
                         QuestionTopic = doc.SelectNodes("//d[@NAME='QuestionTopic']")?[0].InnerText,
-                        QuestionTypeId = int.Parse(doc.SelectNodes("//d[@NAME='QuestionTypeId']")?[0].InnerText),
+                        QuestionTypeId = ToNullableInt(doc.SelectNodes("//d[@NAME='QuestionTypeId']")?[0].InnerText),
                         QuestionTypeDesc = doc.SelectNodes("//d[@NAME='QuestionTypeDesc']")?[0].InnerText,
                         RowId = doc.SelectNodes("//d[@NAME='RowId']")?[0].InnerText,
-                        SortOrder = int.Parse(doc.SelectNodes("//d[@NAME='SortOrder']")?[0].InnerText),
+                        SortOrder = ToNullableInt(doc.SelectNodes("//d[@NAME='SortOrder']")?[0].InnerText),
                         SubjectUserId = ToNullableInt(doc.SelectNodes("//d[@NAME='SubjectUserId']")?[0].InnerText),
                         SubjectExternalId = doc.SelectNodes("//d[@NAME='SubjectExternalId']")?[0].InnerText,
                         SubjectExternalIdLabel = doc.SelectNodes("//d[@NAME='SubjectExternalIdLabel']")?[0].InnerText,
@@ -659,8 +659,8 @@ namespace EValueApi
                         EvaluationRequestId = int.Parse(doc.SelectNodes("//d[@NAME='evaluationrequestid']")?[0].InnerText),
                         CompletedDate = ConvertXmlDateValue(doc.SelectNodes("//d[@NAME='CompletedDate']")?[0].InnerText),
                         LastEvaluatorUpdateDate = ConvertXmlDateValue(doc.SelectNodes("//d[@NAME='LastEvaluatorUpdateDate']")?[0].InnerText),
-                        StatusId = statusId,
-                        EvaluationFormTypeId = evaluationFormTypeId
+                        StatusId = int.Parse(doc.SelectNodes("//d[@NAME='EvaluationStatus']")?[0].InnerText),
+                        EvaluationFormTypeId = int.Parse(doc.SelectNodes("//d[@NAME='formid']")?[0].InnerText)
                     });
                 }
             }
